@@ -1,0 +1,6 @@
+.DS_Store
+*.swp
+*~
+.claude/memory/
+scratch/*
+!scratch/.gitkeep

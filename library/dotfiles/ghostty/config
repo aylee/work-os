@@ -1,0 +1,3 @@
+theme = Carbonfox
+copy-on-select = clipboard
+cursor-style = block

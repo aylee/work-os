@@ -1,0 +1,21 @@
+# Notion database registry — uncomment and fill in your database URLs.
+# Skills read this file directly for Notion integration.
+#
+# To find your database URL:
+# 1. Open the database in Notion
+# 2. Click "..." → "Copy link"
+# 3. Paste the URL below
+#
+# databases:
+#   tasks:
+#     url: https://www.notion.so/your-workspace/...
+#     use: GTD inbox, next actions, daily tasks
+#   projects:
+#     url: https://www.notion.so/your-workspace/...
+#     use: Active projects, status tracking
+#   goals:
+#     url: https://www.notion.so/your-workspace/...
+#     use: Quarterly and annual goals, OKRs
+#   meeting-notes:
+#     url: https://www.notion.so/your-workspace/...
+#     use: AI meeting notes, summaries, action items
