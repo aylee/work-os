@@ -105,30 +105,18 @@ Present two paths:
 
 ### Step 3: Areas
 
-Show the default area structure:
+**Say:** "Let's fill in your work context."
 
-```
-areas/
-  work/       — Your job, career, professional projects
-  health/     — Physical and mental health
-  finances/   — Money, budgets, investments
-  personal/   — Relationships, hobbies, personal growth
-```
+The default area is `areas/work/` — your company, role, team, and priorities. Users can create additional area directories later (e.g., `areas/product/`, `areas/engineering/`) if needed.
 
-**Ask:** "These are your life areas — domains you maintain ongoing. Want to add, remove, or rename any?"
-
-- If adding: create the directory and a starter `AREA.md` with the area name as H1 and a placeholder description
-- If removing: confirm, then remove the directory
-- If renaming: move the directory
-
-**Deep-fill work area:**
-
-**Ask:** "Let's fill in your work context. Tell me about your company — what does it do, what's your team, what are you focused on this quarter?"
+**Ask:** "Tell me about your company — what does it do, what's your team, what are you focused on this quarter?"
 
 Update `areas/work/AREA.md` with:
 - Company name and what it does (1-2 sentences)
 - Team/role context
 - Current focus / Big Rocks (if the user provides them)
+
+Also mention `areas/work/commitments.md` — things you owe people. It ships with demo data; the user can update it during setup or later.
 
 If the user has an org prefix convention for projects (e.g., `acme-` for Acme Corp projects), note it:
 
@@ -304,12 +292,13 @@ Other useful skills:
 - `/research` — Structured research and analysis
 - `/decision` — Record a decision with rationale
 - `/editor` — Polish a document's voice and formatting
-- `/reflect` — Weekly review and course correction
+- `/morning` — Quick daily briefing
+- `/review` — Weekly review and course correction
 - `/recent` — See recently edited files
 - `/sessions` — Manage Claude Code session history
 
 Your system improves over time. Corrections go to `memory/corrections/`,
-and `/reflect` closes the loop by turning patterns into system upgrades.
+and `/review` closes the loop by turning patterns into system upgrades.
 ```
 
 ---

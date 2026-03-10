@@ -12,7 +12,7 @@ The `/setup` wizard walked you through five steps. Here's what each one created:
 
 **Writing voice** -- If you provided writing samples, your voice patterns were extracted and saved to `library/reference/me.md` under the Voice section. If you skipped this, defaults were used -- your voice profile will build naturally as you use `/editor`.
 
-**Areas** -- Your life domains (`areas/work/`, `areas/health/`, etc.) were confirmed or customized. The work area (`areas/work/AREA.md`) was filled with your company context, team structure, and quarterly priorities. These are the "standards" Claude references when your work touches those domains.
+**Areas** -- Your work context (`areas/work/AREA.md`) was filled with your company context, team structure, and quarterly priorities. These are the "standards" Claude references when your work touches those domains.
 
 **Desk** -- Your active projects became binders at `desk/{project}/BINDER.md`. Each binder is a working directory -- specs, briefs, research, and decisions all live alongside the manifest. This is where the work happens.
 
@@ -54,9 +54,9 @@ Option 1: Re-run `/setup` and choose the Voice section. Paste 2-3 of your best d
 
 Option 2: Write a few docs using `/brief`, `/spec`, or `/rfc`, then run `/editor` on each one. Make your edits. Over time, the voice-examples and doc-examples files build into a calibration library.
 
-### Try `/reflect` at the end of the week
+### Try `/review` at the end of the week
 
-`/reflect` is the weekly review skill. It compares what you planned to what you actually did, surfaces open corrections, reviews the backburner, and writes a review to `memory/reviews/`. Then it sets up next week.
+`/review` is the weekly review skill. It compares what you planned to what you actually did, surfaces open corrections, reviews the backburner and commitments, and writes a review to `memory/reviews/`. Then it sets up next week.
 
 The first time you run it, there won't be much history. That's fine. The value compounds -- after a month, you have a searchable log of what you worked on, what shipped, and what got carried forward.
 
@@ -81,7 +81,7 @@ work-os gets better the more you use it. Here's the feedback loop:
   Capture (corrections, decisions, session exports)
        |
        v
-  Analyze (/reflect scans patterns weekly)
+  Analyze (/review scans patterns weekly)
        |
        v
   Apply (update skills, CLAUDE.md, reference docs)
@@ -96,7 +96,7 @@ work-os gets better the more you use it. Here's the feedback loop:
 
 **Decisions** -- When you make a meaningful choice, record it with `/decision`. Six months from now, when someone asks "why did we choose X?", the answer is in `memory/decisions/`.
 
-**Reviews** -- `/reflect` synthesizes the week, archives corrections that have been addressed, and proposes system improvements. Over time, `memory/reviews/` becomes a log of how your working system has evolved.
+**Reviews** -- `/review` synthesizes the week, archives corrections that have been addressed, and proposes system improvements. Over time, `memory/reviews/` becomes a log of how your working system has evolved.
 
 The key insight: corrections trend toward empty. Fewer open corrections means the system is improving. The goal is a system that makes fewer mistakes over time because it learns from the ones it made.
 
@@ -118,11 +118,11 @@ Place in `~/Library/Mobile Documents/com~apple~CloudDocs/work-os/`. Works, but i
 **What you lose without git:**
 - `git log` history (no "when did I change this?")
 - `/recent` skill (relies on git history for file activity)
-- Diff-based review in `/reflect`
+- Diff-based review in `/review`
 - Atomic commits as checkpoints
 
 **What still works:**
-- All skills (`/desk`, `/open`, `/brief`, `/spec`, `/rfc`, `/research`, `/decision`, `/editor`, `/shape`, `/reflect`)
+- All skills (`/desk`, `/open`, `/brief`, `/spec`, `/rfc`, `/research`, `/decision`, `/editor`, `/shape`, `/review`)
 - The full memory system (corrections, decisions, reviews, sessions)
 - Weekly planning and orientation
 - Writing workflow

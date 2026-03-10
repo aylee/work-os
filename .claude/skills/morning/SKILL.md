@@ -1,15 +1,15 @@
 ---
-name: orient
+name: morning
 description: Daily briefing — here's where you are and what matters today.
 disable-model-invocation: true
 ---
 
-Daily orientation. Reads weekly plan, binders, and goals to produce a "here's where you are" briefing. Lighter than `/desk` — no curation flow, just synthesis.
+Daily briefing. Reads weekly plan, binders, and goals to produce a "here's where you are" briefing. Lighter than `/desk` — no curation flow, just synthesis.
 
 ## Usage
 
 ```
-/orient
+/morning
 ```
 
 ## Workflow
@@ -60,7 +60,7 @@ Omit any Attention items that don't apply. If nothing needs attention, omit the 
 ## What This Skill Does NOT Do
 
 - No weekly curation (that's `/desk`)
-- No correction synthesis (that's `/reflect`)
+- No correction synthesis (that's `/review`)
 - No writing to files — this is read-only
 
 ## Tools Used

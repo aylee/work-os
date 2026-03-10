@@ -25,7 +25,7 @@ Shows your weekly focus, active binders, backburner highlights, and suggested fo
 
 ---
 
-### `/orient`
+### `/morning`
 
 **Daily briefing -- here's where you are and what matters today.**
 
@@ -33,10 +33,10 @@ A lighter version of `/desk`. Reads weekly plan, active binders, and Big Rocks t
 
 **Usage:**
 ```
-/orient
+/morning
 ```
 
-**When to use it:** Quick daily check-in. Use `/desk` for the full curation experience, `/orient` for a fast read-only briefing.
+**When to use it:** Quick daily check-in. Use `/desk` for the full curation experience, `/morning` for a fast read-only briefing.
 
 **What it produces:** This Week summary, 2-3 suggested actions for today, and attention flags (stale projects, misaligned goals). Omits sections that don't apply.
 
@@ -199,15 +199,15 @@ Loads all four reference files (me.md, writing-guide.md, voice-examples.md, doc-
 
 Skills for reflection, maintenance, and system health.
 
-### `/reflect`
+### `/review`
 
-**Step back -- close the loop, archive the week, set direction for next.**
+**Weekly review -- close the loop, archive the week, set direction for next.**
 
-Weekly review that compares planned vs. actual, synthesizes corrections, reviews the backburner, and writes a review to `memory/reviews/`. Updates `areas/work/plans.md` with next week's priorities.
+Weekly review that compares planned vs. actual, synthesizes corrections, reviews the backburner and commitments, and writes a review to `memory/reviews/`. Updates `areas/work/plans.md` with next week's priorities.
 
 **Usage:**
 ```
-/reflect
+/review
 ```
 
 **When to use it:** End of the week (Friday or Sunday). This is how the system learns. The first few runs will be light -- the value compounds over months.

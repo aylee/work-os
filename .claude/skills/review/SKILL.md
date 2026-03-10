@@ -1,15 +1,15 @@
 ---
-name: reflect
-description: Step back — close the loop, archive the week, set direction for next.
+name: review
+description: Weekly review — close the loop, archive the week, set direction for next.
 disable-model-invocation: true
 ---
 
-Weekly reflection that archives This Week, synthesizes the past week's work, surfaces corrections and patterns, and sets direction. Closes the compounding loop: capture > analyze > apply > orient.
+Weekly review that archives This Week, synthesizes the past week's work, surfaces corrections and patterns, and sets direction. Closes the compounding loop: capture > analyze > apply.
 
 ## Usage
 
 ```
-/reflect
+/review
 ```
 
 ## Workflow
@@ -62,7 +62,9 @@ Ask the user which to act on. Then:
 1. Make the changes (edit skills, CLAUDE.md, reference docs, conventions)
 2. Delete resolved correction files from `memory/corrections/`
 
-### Step 4: Look Ahead — Backburner Review
+### Step 4: Look Ahead — Backburner + Commitments Review
+
+If `areas/work/commitments.md` exists, read it. Surface any items that look stale or overdue. Ask: "Any commitments to mark done or update?"
 
 If `areas/work/backburner.md` exists, read it. Present the current backburner items grouped by person or theme.
 

@@ -14,7 +14,7 @@ Repo-first personal operating system. Notion is the database layer (horizons of 
 | When the topic involves... | Load... |
 |---|---|
 | A specific project | Binder: `desk/{project}/BINDER.md` |
-| A life domain (health, finances, etc.) | Area: `areas/{domain}/AREA.md` |
+| A domain (e.g., work context, team structure) | Area: `areas/{domain}/AREA.md` |
 | Project status, strategy, what's on the desk | `areas/work/AREA.md` |
 | Weekly focus, what matters this week | `areas/work/plans.md` |
 | Goals, OKRs, quarterly planning | Notion Goals database (if `.claude/notion.yaml` configured) |
@@ -28,6 +28,7 @@ Repo-first personal operating system. Notion is the database layer (horizons of 
 | Corrections, what went wrong + why | `memory/corrections/` (individual files) |
 | Meeting notes | Notion meeting-notes DB (if `.claude/notion.yaml` configured), fetch with `include_transcript: true` |
 | Session history, cross-repo search | `memory/sessions/` + `/sessions` skill |
+| What do I owe someone, commitments, action items | `areas/work/commitments.md` |
 | Backburner ideas queued by person | `areas/work/backburner.md` |
 | File naming, frontmatter, lifecycle | `library/reference/conventions.md` |
 
@@ -62,7 +63,7 @@ library/           All reference material
 memory/            Compounding feedback loop
   corrections/     Structured corrections (individual files with frontmatter)
   decisions/       Point-in-time "why we chose X"
-  reviews/         Weekly synthesis from /reflect
+  reviews/         Weekly synthesis from /review
   sessions/        Auto-exported transcripts from all repos
 scratch/           Throwaway thinking
 ```
@@ -100,12 +101,12 @@ Durable memory lives in `memory/`. The system improves through a feedback loop: 
 | Sessions | `memory/sessions/` | Auto-exported transcripts from all repos | `export-session.py` or `/sessions export` |
 | Corrections | `memory/corrections/` | What went wrong + why (structured frontmatter) | Session-end capture |
 | Decisions | `memory/decisions/` | Point-in-time "why we chose X" | When a design choice is made |
-| Reviews | `memory/reviews/` | Weekly synthesis, pattern detection | `/reflect` |
+| Reviews | `memory/reviews/` | Weekly synthesis, pattern detection | `/review` |
 
 **The loop:**
 1. **Capture** — Sessions auto-export. Corrections captured during sessions. Decisions logged when made.
 2. **Store** — Sessions are append-only (never delete). Corrections are individual files with `status: open`. Decisions are permanent.
-3. **Analyze** — `/reflect` scans corrections by domain, groups patterns, compares with sessions. Proposes system changes.
+3. **Analyze** — `/review` scans corrections by domain, groups patterns, compares with sessions. Proposes system changes.
 4. **Apply** — Make the change (skill, CLAUDE.md, reference doc). Delete resolved corrections (git has history). Write review to `memory/reviews/`.
 
 **Correction format:**

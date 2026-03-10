@@ -39,7 +39,7 @@ Career, professional development, and company context. This is the anchor area -
 
 ## Big Rocks
 
-> These are your quarterly priorities -- the 3-4 things that matter most. Update these each quarter. `/desk` and `/orient` cross-reference these to keep you focused.
+> These are your quarterly priorities -- the 3-4 things that matter most. Update these each quarter. `/desk` and `/morning` cross-reference these to keep you focused.
 
 ### 1. [First Priority]
 [One-sentence description of what "done" looks like.]

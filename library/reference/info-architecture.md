@@ -55,7 +55,7 @@ Work-os is where things get written and where the system learns. Two functions:
 **Memory** — the feedback loop:
 1. **Capture** — Sessions auto-export, corrections filed, decisions logged
 2. **Store** — Append-only sessions, individual correction files, permanent decisions
-3. **Analyze** — `/reflect` groups corrections by domain, spots patterns
+3. **Analyze** — `/review` groups corrections by domain, spots patterns
 4. **Apply** — System change made, correction deleted, review written
 
 ## Key Boundaries

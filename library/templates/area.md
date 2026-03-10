@@ -9,7 +9,7 @@ type: area
 
 ## Standards
 
-Decision rules, philosophies, constraints, and what "good" looks like. Durable — changes quarterly at most. Include Claude-specific guardrails for safety-critical areas (health, wealth).
+Decision rules, philosophies, constraints, and what "good" looks like. Durable — changes quarterly at most.
 
 ## Now
 

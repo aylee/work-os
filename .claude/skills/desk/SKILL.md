@@ -1,10 +1,10 @@
 ---
 name: desk
-description: Orient — what's on your plate? This Week, desk state, backburner, suggested focus.
+description: What's on your plate? This Week, desk state, backburner, suggested focus.
 disable-model-invocation: true
 ---
 
-Orient to the current state of work. Shows weekly focus, active binders, backburner highlights, and suggests today's focus.
+See the current state of work. Shows weekly focus, active binders, backburner highlights, and suggests today's focus.
 
 ## Usage
 
@@ -48,11 +48,13 @@ Group by status and display:
 
 Sort active binders by last session date (most recent first). Flag any active binder with a last session 14+ days old as stale.
 
-### Step 3: Backburner Highlights
+### Step 3: Commitments + Backburner Highlights
+
+If `areas/work/commitments.md` exists, read it. Surface any items that seem timely or overdue — things you owe people that need attention soon.
 
 Read `areas/work/backburner.md`. Scan for items that connect to what's currently active on the desk (e.g., a backburner item for someone working on an active binder's project). Surface 1-3 timely items, if any.
 
-If no items seem timely, or if backburner.md doesn't exist, skip this section.
+If no items seem timely, or if the files don't exist, skip this section.
 
 ### Step 4: Suggested Focus
 
@@ -104,7 +106,7 @@ Triggered when `## This Week` is empty or stale (start of week).
 ## What This Skill Does NOT Do
 
 - No Notion queries (use Notion tools directly if configured)
-- No correction synthesis (that's `/reflect`)
+- No correction synthesis (that's `/review`)
 
 ## Tools Used
 
