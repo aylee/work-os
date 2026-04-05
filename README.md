@@ -1,167 +1,173 @@
 # Work-OS
 
-A personal operating system for knowledge workers, powered by [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+work-os is an opinionated starter workspace for PMs, founders, and
+other knowledge workers using Claude Code and Codex.
 
-Clone it. Try `/desk`. Then make it yours.
+It ships with fictional demo projects, plans, commitments, and
+reference material so you can try the workflow before personalizing it.
 
-## Try It (2 minutes)
+## Quickstart
 
-**Step 1.** Install Claude Code if you haven't:
+### Claude Code
 
-    npm install -g @anthropic-ai/claude-code
+1. Install Claude Code:
 
-Full instructions: https://docs.anthropic.com/en/docs/claude-code
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
 
-**Step 2.** Open your terminal -- Ghostty, VS Code, Terminal.app, whatever you use.
+2. Clone the repo and open Claude:
 
-**Step 3.** Clone and open the repo:
+   ```bash
+   git clone https://github.com/aylee/work-os.git
+   cd work-os
+   claude
+   ```
 
-    git clone https://github.com/aylee/work-os.git
-    cd work-os
-    claude
+3. Run:
 
-**Step 4.** Type `/desk` and press Enter.
+   ```text
+   /desk
+   ```
 
-The repo ships with demo data -- two sample projects, a weekly plan, a backburner. `/desk` reads all of it and synthesizes your priorities. No setup needed to see it work.
+The demo workspace already includes a weekly plan, two sample binders,
+commitments, and a backburner. No setup is required to see the system
+work.
+
+### Codex
+
+Codex does not use Claude slash commands. It uses the same repo
+structure and shared agent contract.
+
+Clone the repo, open it in Codex, and start with a prompt like:
+
+```text
+Read AGENTS.md and docs/agent-guide.md, then summarize the current demo desk using areas/work/plans.md and desk/*/BINDER.md.
+```
 
 ## Make It Yours
 
-Once you've seen the demo, type `/setup`. It walks you through replacing the sample data with your real work -- name, role, projects, writing voice. Takes about 5 minutes.
+After trying the demo, run `/setup` in Claude Code to replace the demo
+identity and work context with your own. Setup is meant to personalize
+user-owned files such as:
+
+- `library/reference/me.md`
+- `areas/work/AREA.md`
+- `desk/*/BINDER.md`
+- `.claude/notion.yaml` if you opt into integrations
+
+It does not rewrite the shared repo contract in `AGENTS.md`,
+`CLAUDE.md`, or `docs/agent-guide.md`.
+
+For multi-session work, keep local working notes in `cc_state/`. That
+directory is per-clone, gitignored, and intentionally untracked.
+
+## Claude vs Codex
+
+| Runtime | What you get |
+| --- | --- |
+| Claude Code | Full slash-command workflow via `.claude/skills/` (`/desk`, `/open`, `/setup`, `/brief`, `/review`, and more) |
+| Codex | First-class support through `AGENTS.md`, `docs/agent-guide.md`, the binder/area structure, templates, and local `cc_state/` |
+
+The repo aims for shared structure across both tools, not slash-command
+parity.
 
 ## What You Get
 
-| Directory | Purpose |
-|-----------|---------|
-| `desk/` | Active project binders -- one folder per workstream |
-| `areas/` | Work context -- company, role, priorities |
-| `library/` | Reference docs, templates, guides, scripts |
-| `memory/` | Corrections, decisions, reviews, session transcripts |
-| `scratch/` | Throwaway thinking |
+| Path | Purpose |
+| --- | --- |
+| `AGENTS.md` | Canonical cross-tool repo contract |
+| `docs/agent-guide.md` | Detailed shared guide for Claude Code and Codex |
+| `desk/` | Active project binders, one directory per workstream |
+| `areas/` | Durable work context such as strategy, plans, commitments |
+| `library/` | Reference docs, templates, guides, scripts, dotfiles |
+| `memory/` | Committed corrections, decisions, reviews, session exports |
+| `cc_state/` | Local, gitignored hot working state for plans, notes, traces |
+| `.claude/skills/` | Claude Code slash commands |
 
-Track what you owe people (`areas/work/commitments.md`) and what's waiting in the wings (`areas/work/backburner.md`).
+Track what you owe people in `areas/work/commitments.md`, what is queued
+in `areas/work/backburner.md`, and what matters this week in
+`areas/work/plans.md`.
 
-Plus 14 slash commands that read your context and produce real output -- briefs, specs, RFCs, research docs, decision records, and more.
+## Claude Code Skills
 
-## Skills
+work-os currently ships with 14 Claude Code slash commands. The most
+important ones are:
 
-### Orientation
-| Skill | What it does |
-|-------|-------------|
-| `/desk` | Weekly focus, desk state, suggested priorities |
-| `/morning` | Quick daily briefing -- where you are, what matters today |
-| `/open <project>` | Open a project binder, load context, resume where you left off |
+- `/desk` for weekly focus and desk state
+- `/open <project>` for binder-based project work
+- `/brief`, `/spec`, `/rfc`, `/research`, and `/decision` for drafting
+- `/review` for weekly reflection and system cleanup
+- `/setup` for personalization
+
+See `library/guides/skills-reference.md` for the full list.
+
+## Working Model
 
 ### Writing
-| Skill | What it does |
-|-------|-------------|
-| `/shape` | Understand a request before acting -- requirements gathering |
-| `/brief <topic>` | Write a project brief or 1-pager |
-| `/spec <topic>` | Write or iterate on a product spec / PRD |
-| `/rfc <topic>` | Write an RFC -- propose approaches, frame tradeoffs |
-| `/research <topic>` | Structured research and analysis |
-| `/decision <topic>` | Record a decision with full context and rationale |
-| `/editor <file>` | Editing pass -- tighten voice, fix formatting, sharpen structure |
 
-### System
-| Skill | What it does |
-|-------|-------------|
-| `/review` | Weekly review -- archive the week, surface patterns, set direction |
-| `/recent` | Recently edited files (like a "recent docs" view) |
-| `/sessions` | List, search, and export Claude Code session history |
+The writing workflow is:
 
-### Setup
-| Skill | What it does |
-|-------|-------------|
-| `/setup` | Onboarding wizard -- personalize everything |
+1. Shape the problem.
+2. Draft with the right template or skill.
+3. Iterate in conversation.
+4. Polish with editing guidance.
 
-## The Writing System
+### Memory
 
-Four stages, each with its own skill and context budget:
+The system compounds through a simple loop:
 
-1. **Shape** (`/shape`) -- Define scope and intent before building
-2. **Draft** (`/brief`, `/spec`, `/rfc`, `/research`, `/decision`) -- Substance and coverage
-3. **Iterate** (conversation) -- Add, remove, restructure, sharpen
-4. **Polish** (`/editor`) -- Voice, formatting, sentence craft
-
-Drafting skills load your identity and voice principles. `/editor` loads the full style guide with examples.
-
-## The Memory System
-
-The system learns from itself through a feedback loop:
-
-```
-Capture --> Store --> Analyze --> Apply
+```text
+Capture -> Store -> Analyze -> Apply
 ```
 
-- **Sessions** auto-export as readable transcripts
-- **Corrections** capture what went wrong and why
-- **Decisions** record point-in-time rationale
-- **Reviews** (`/review`) synthesize weekly, spot patterns, propose system changes
-
-Fewer open corrections = system improving.
-
-## After Setup
-
-```
-/desk              # See what's on your plate
-/morning           # Quick daily briefing
-/open my-project   # Jump into a project
-/brief new feature # Draft a project brief
-/shape big idea    # Think through a request before building
-```
-
-See `library/guides/getting-started.md` for a full orientation.
+- `cc_state/` holds active, local working state
+- `memory/` holds committed corrections, decisions, reviews, and session
+  exports
 
 ## Requirements
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (required)
 - macOS or Linux
-- Optional: [Homebrew](https://brew.sh) (run `brew bundle` for CLI tools)
-- Optional: git (skills degrade gracefully without it)
+- git recommended, not required
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) for the
+  full slash-command UX
+- Codex supported through the repo contract and markdown structure
+- Optional: [Homebrew](https://brew.sh) for CLI tools in `Brewfile`
 
-### Terminal
-
-Any terminal works. We recommend:
-
-- **[cmux](https://www.cmux.dev/)** -- Vertical tabs, sidebar, notifications bell. Built for Claude Code.
-- **[Ghostty](https://ghostty.org/)** -- Fast, minimal, keyboard-driven.
-- **VS Code** with the Claude Code extension also works great.
+Any terminal works. Good options are [cmux](https://www.cmux.dev/),
+[Ghostty](https://ghostty.org/), and the VS Code integrated terminal.
 
 ## No Git? No Problem
 
-The core system is markdown files in folders. Git enhances it but isn't required:
+The core system is still just markdown files in folders. Without git,
+you lose history and some convenience, but the workspace still functions:
 
 - Skills that commit will skip the commit step
 - `/recent` falls back to file modification dates
-- `/review` displays the review in conversation instead of writing a file
-- `/setup` asks about git and adapts accordingly
+- `/review` can display results in conversation instead of writing a
+  review file
 
 Works fine in Google Drive, Dropbox, iCloud, or any synced folder.
 
 ## Project Structure
 
-```
+```text
 work-os/
-├── CLAUDE.md                  # System instructions (routing table, conventions)
+├── AGENTS.md                  # Canonical cross-tool repo contract
+├── CLAUDE.md                  # Thin Claude shim pointing to AGENTS.md
 ├── Brewfile                   # CLI tools
+├── docs/
+│   └── agent-guide.md         # Shared detailed agent guide
 ├── .claude/
-│   ├── settings.json          # Permissions
-│   ├── notion.yaml.example    # Notion integration template
-│   └── skills/                # 14 slash commands
-├── desk/                      # Project binders (one folder per project)
-│   └── z_archive/             # Shipped projects
-├── areas/                     # Work context (company, role, priorities)
-├── library/
-│   ├── reference/             # me.md, writing-guide, frameworks, conventions
-│   ├── templates/             # 10 document templates
-│   ├── guides/                # Getting started, skills reference, tooling
-│   ├── scripts/               # Session export tool
-│   └── dotfiles/              # Terminal and editor configs
-├── memory/
-│   ├── corrections/           # What went wrong + why
-│   ├── decisions/             # Point-in-time rationale
-│   ├── reviews/               # Weekly synthesis
-│   └── sessions/              # Exported conversation transcripts
+│   ├── settings.json          # Safe repo defaults for Claude Code
+│   ├── notion.yaml.example    # Integration template
+│   └── skills/                # Claude Code slash commands
+├── desk/                      # Project binders
+│   └── z_archive/             # Archived binders
+├── areas/                     # Work context and planning
+├── library/                   # References, templates, guides, scripts
+├── memory/                    # Committed corrections, decisions, reviews
+├── cc_state/                  # Local only, gitignored working state
 └── scratch/                   # Throwaway thinking
 ```
 

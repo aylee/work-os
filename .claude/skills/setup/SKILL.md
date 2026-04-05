@@ -4,7 +4,12 @@ description: Onboarding wizard — personalize your work-os with identity, voice
 disable-model-invocation: true
 ---
 
-The onboarding wizard for work-os. A multi-step conversation that personalizes the system to you — your identity, writing voice, life areas, active projects, and integrations. Run it once to bootstrap, or re-run anytime to update.
+The onboarding wizard for work-os. A multi-step conversation that
+personalizes setup-owned files for the user: identity, writing voice,
+work context, active projects, and optional integrations.
+
+Do not use `/setup` to rewrite the canonical repo contract in
+`AGENTS.md`, `CLAUDE.md`, or `docs/agent-guide.md`.
 
 ## Usage
 
@@ -25,6 +30,9 @@ Read `library/reference/me.md`. Check if it still contains `[YOUR NAME]` or `[Yo
 - Say: "Looks like setup has already run. Want to re-run a specific section, or start fresh?"
 - Offer choices: Identity, Voice, Areas, Desk, Integrations, Tooling, or Full Re-run
 - If the user picks a section, jump to that step. If full re-run, proceed from Step 1.
+
+Before making changes, briefly explain which files `/setup` will update.
+Make clear that shared repo contract files stay generic.
 
 ---
 
@@ -51,7 +59,8 @@ Gather core identity information through conversation:
 **Technical level:** {level}
 ```
 
-2. **Update `CLAUDE.md`** — If CLAUDE.md contains a `{USER_NAME}` placeholder in the header or intro, replace it with the user's name.
+2. **Do not update repo contract files** — Leave `AGENTS.md`,
+   `CLAUDE.md`, and `docs/agent-guide.md` unchanged during setup.
 
 ---
 
@@ -116,7 +125,9 @@ Update `areas/work/AREA.md` with:
 - Team/role context
 - Current focus / Big Rocks (if the user provides them)
 
-Also mention `areas/work/commitments.md` — things you owe people. It ships with demo data; the user can update it during setup or later.
+Also mention `areas/work/commitments.md`, `areas/work/backburner.md`,
+and `areas/work/plans.md`. They may still contain demo data; the user
+can replace them during setup or later.
 
 If the user has an org prefix convention for projects (e.g., `acme-` for Acme Corp projects), note it:
 
@@ -153,11 +164,11 @@ type: project
 *No sessions yet. Run `/open {name}` to start working.*
 ```
 
-**Check for dummy binders:** If `desk/` contains example/dummy binders from the template (check for names like `example-project`, `demo`, or BINDER.md files with placeholder content), ask:
+**Check for shipped demo binders:** If `desk/` still contains the public
+example binders, ask whether to keep them for reference, remove them, or
+archive them after creating the user's real binders.
 
-"I see some example binders in desk/. Want me to remove them?"
-
-If yes, delete the dummy binder directories.
+Never delete demo binders without asking first.
 
 ---
 
@@ -188,7 +199,7 @@ databases: {}
 ```
 
 - Tell the user: "Add your database URLs to `.claude/notion.yaml` when ready. Skills like `/brief`, `/spec`, and `/research` will use them for context."
-- Update CLAUDE.md routing table if it has a Notion row — confirm it points to `.claude/notion.yaml`
+- Treat `.claude/notion.yaml` as a local, untracked file.
 
 #### Linear
 
@@ -227,8 +238,8 @@ If yes:
   - **VS Code terminal** — works fine if you prefer staying in your editor.
 
 **Brewfile:**
-If `library/dotfiles/Brewfile` exists:
-- Ask: "There's a Brewfile with recommended tools. Want to install them? (`brew bundle --file=library/dotfiles/Brewfile`)"
+If `Brewfile` exists at the repo root:
+- Ask: "There's a Brewfile with recommended tools. Want to install them? (`brew bundle --file=Brewfile`)"
 - If yes, run the install
 
 **Dotfiles:**
@@ -253,10 +264,14 @@ If `library/dotfiles/` contains config files:
 
 ### Files modified:
 - library/reference/me.md
-- CLAUDE.md
 - areas/work/AREA.md
 - desk/{project}/BINDER.md (x N)
 - .claude/notion.yaml (if configured)
+
+**Contracts untouched:**
+- AGENTS.md
+- CLAUDE.md
+- docs/agent-guide.md
 ```
 
 **Cleanup:** If any template placeholder files remain (dummy binders, example content), offer to remove them.
@@ -299,6 +314,9 @@ Other useful skills:
 
 Your system improves over time. Corrections go to `memory/corrections/`,
 and `/review` closes the loop by turning patterns into system upgrades.
+
+If you're using Codex later, start by having it read `AGENTS.md` and the
+relevant files under `areas/` and `desk/`.
 ```
 
 ---
@@ -308,6 +326,9 @@ and `/review` closes the loop by turning patterns into system upgrades.
 - **Conversational, not scripted.** Each step is a dialogue. Ask, listen, produce. Don't dump forms.
 - **Progressive disclosure.** Core setup (Steps 1-4) takes 3 minutes. Integrations and tooling are optional.
 - **Idempotent.** Re-running any step updates in place rather than duplicating. Detect existing state before writing.
+- **Personalize user-owned files only.** Setup changes identity, area,
+  project, and integration files. It does not rewrite shared repo
+  contracts.
 - **No silent writes.** Always show what will be created/modified before doing it. Ask for confirmation on destructive operations.
 
 ## Tools Used
