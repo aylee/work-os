@@ -3,6 +3,5 @@
 *~
 .claude/memory/
 .claude/notion.yaml
-cc_state/
 scratch/*
 !scratch/.gitkeep

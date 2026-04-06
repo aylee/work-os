@@ -82,7 +82,7 @@ parity.
 | `areas/` | Durable work context such as strategy, plans, commitments |
 | `library/` | Reference docs, templates, guides, scripts, dotfiles |
 | `memory/` | Committed corrections, decisions, reviews, session exports |
-| `cc_state/` | Local, gitignored hot working state for plans, notes, traces |
+| `cc_state/` | Hot working state for plans, notes, traces |
 | `.claude/skills/` | Claude Code slash commands |
 
 Track what you owe people in `areas/work/commitments.md`, what is queued
@@ -167,7 +167,7 @@ work-os/
 ├── areas/                     # Work context and planning
 ├── library/                   # References, templates, guides, scripts
 ├── memory/                    # Committed corrections, decisions, reviews
-├── cc_state/                  # Local only, gitignored working state
+├── cc_state/                  # Working state (plans, traces, spikes)
 └── scratch/                   # Throwaway thinking
 ```
 
