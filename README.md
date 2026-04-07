@@ -164,8 +164,8 @@ Capture -> Store -> Analyze -> Apply
   through the repo contract and markdown structure
 - Optional: [Homebrew](https://brew.sh) for CLI tools in `Brewfile`
 
-Any terminal works. Good options are [cmux](https://www.cmux.dev/),
-[Ghostty](https://ghostty.org/), and the VS Code integrated terminal.
+[Ghostty](https://ghostty.org/) is the recommended terminal for
+work-os.
 
 ## No Git? No Problem
 

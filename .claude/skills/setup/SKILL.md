@@ -217,13 +217,13 @@ If yes:
 - Suggest adding the Slack MCP server to `.claude/settings.json` if not already present
 - Note that Claude can search and read Slack channels when configured
 
-#### Google Drive
+#### Google Workspace
 
-**Ask:** "Do you use Google Drive for shared docs?"
+**Ask:** "Do you use Google Drive or Google Docs for shared docs?"
 
 If yes:
-- Note in `areas/work/AREA.md` that Google Drive is used for shared documents
-- Suggest relevant MCP setup if available
+- Note in `areas/work/AREA.md` that Google Workspace is used for shared documents
+- Recommend a `gws` CLI workflow instead of a Google Drive MCP server
 
 ---
 
@@ -232,10 +232,7 @@ If yes:
 **Say:** "A few optional tooling recommendations."
 
 **Terminal:**
-- "For the best Claude Code experience, consider:"
-  - **cmux** (https://www.cmux.dev/) — vertical tabs, sidebar, notifications bell. Built for agentic workflows.
-  - **Ghostty** (https://ghostty.org/) — fast, minimal, great keybindings. Pairs well with tmux.
-  - **VS Code terminal** — works fine if you prefer staying in your editor.
+- "For the best Claude Code experience, use **Ghostty** (https://ghostty.org/) as the default terminal."
 
 **Brewfile:**
 If `Brewfile` exists at the repo root:

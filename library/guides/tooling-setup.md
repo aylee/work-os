@@ -77,28 +77,16 @@ brew bundle --file=Brewfile
 | **ripgrep** | Fast search (`rg`) | Core text search for repo exploration |
 | **tldr** | Simplified man pages | Quick syntax refreshers |
 | **tree** | Directory tree viewer | Easy binder and repo overviews |
+| **yazi** | Terminal file manager | Fast repo browsing and file moves without leaving the terminal |
 | **ghostty** | Terminal emulator | Fast terminal with simple config |
 
 ---
 
 ## Terminal Recommendation
 
-Any solid terminal works. Three good options:
-
-### cmux
-
-Best if you want a purpose-built environment for multiple long-running
-agent sessions.
-
-### Ghostty
-
-Best if you want speed, simple configuration, and a native-feeling
-terminal. A starter config lives at `library/dotfiles/ghostty/config`.
-
-### VS Code Terminal
-
-Best if you prefer working inside your editor and can live without some
-terminal-native session features.
+Ghostty is the recommended terminal for work-os. It is fast, simple,
+and the repo already ships a starter config at
+`library/dotfiles/ghostty/config`.
 
 ---
 
@@ -168,9 +156,10 @@ sessions.
 Use Slack MCP if you want Claude to search or read workspace
 conversations.
 
-### Google Drive
+### Google Workspace
 
-Use Google Drive MCP if important shared docs live outside the repo.
+If important docs live in Google Drive or Docs, prefer a `gws` CLI
+workflow over a Google Drive MCP server.
 
 ---
 
