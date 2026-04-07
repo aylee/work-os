@@ -8,6 +8,8 @@ personalize the repo for real use.
 ## First Reads
 - `README.md` for user-facing orientation and quickstart
 - `docs/agent-guide.md` for the detailed shared repo guide
+- `library/guides/maintainer-workflow.md` when the task is repo-wide
+  maintenance, publishing, or `alex-os` sync
 
 ## Working State
 `cc_state/` is hot local working state shared by Claude Code and Codex.
@@ -51,3 +53,5 @@ Rules:
 
 ## Reference
 Detailed shared guidance lives in `docs/agent-guide.md`.
+The canonical maintainer workflow lives in
+`library/guides/maintainer-workflow.md`.
