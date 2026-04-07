@@ -200,4 +200,4 @@ work-os/
 
 ## License
 
-MIT
+See [LICENSE](LICENSE).
