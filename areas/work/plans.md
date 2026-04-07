@@ -8,15 +8,17 @@ Rolling weekly and monthly intentions. `/desk` reads this for orientation. `/rev
 
 ## This Week
 
-*Week of Mar 9*
+*Week of Apr 6, 2026*
 
 - **Mobile Redesign**
-  - Review Priya's wireframes with Dana
-  - Get Marcus's SDK assessment for anonymous sessions
-  - Make the A/B test decision
+  - Lock the sample-workspace flow with Priya and Marcus
+  - Decide whether Raj gets a 10% holdback for paid cohorts
+  - Get legal sign-off on anonymous session retention copy
 - **Q3 Pricing**
-  - Build churn risk model with Taylor's data
-  - Schedule pricing committee review
+  - Finalize the hybrid package ranges with Taylor
+  - Dry-run the pricing memo with Jordan before the council
+  - Prep the April 9 pricing council deck and migration FAQ
 - **Team**
-  - Prep for Thursday's all-hands presentation
-  - 1:1 with Dana -- discuss H2 roadmap priorities
+  - Publish the Monday KPI readout
+  - 1:1 with Priya on design-system debt after the redesign
+  - Update Dana on the Q2 big-rock burn-down

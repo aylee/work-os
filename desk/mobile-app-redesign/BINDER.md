@@ -5,16 +5,18 @@ started: 2026-02-15
 
 # Mobile App Redesign
 
-Redesign the mobile app's onboarding flow to reduce drop-off and improve activation. Focus on first-session experience and permission prompts.
+Redesign the SignalPath mobile onboarding flow so new teams reach first
+value before we ask for full setup. Focus on guest entry, permission
+timing, and activation instrumentation.
 
 ## Context
 
-- **PM:** [Your Name]
+- **PM:** Maya Desai
 - **Eng Lead:** Marcus Chen
 - **Design:** Priya Sharma
-- **Stakeholders:** VP Product (Dana), Head of Growth (Raj)
-- **Linear project:** [Mobile Redesign](https://linear.app/your-org/project/mobile-redesign)
-- **Figma:** [Onboarding Flows v3](https://figma.com/file/example)
+- **Stakeholders:** Dana Alvarez (VP Product), Raj Patel (Growth), Nia Gomez (Support)
+- **Linear project:** [Mobile Redesign](https://linear.app/signalpath/project/mobile-redesign)
+- **Figma:** [Mobile Onboarding v4](https://www.figma.com/file/signalpath/mobile-onboarding-v4)
 
 ## Artifacts
 
@@ -22,10 +24,19 @@ Redesign the mobile app's onboarding flow to reduce drop-off and improve activat
 
 ## Last Session
 
-_2026-03-06_
+_2026-04-03_
 
-**What happened:** Finalized the brief with pain points and proposed phased approach. Reviewed analytics with Raj -- confirmed 62% drop-off at the permission prompt screen. Priya shared early wireframes for the progressive disclosure flow. Discussed whether to A/B test the new flow or ship it as a full replacement.
+**What happened:** Reviewed Priya's prototype with Dana and Marcus. The
+team aligned on a sample-workspace preview instead of forcing account
+creation on the first screen, and cut contacts permissions from the
+default path. Raj shared the latest cohort view, which confirmed that
+paid installs still underperform most sharply at the permission wall.
 
-**Open:** Need Marcus to confirm if the deep-link attribution SDK supports the new flow. Priya's wireframes need review from Dana before eng handoff. A/B test infrastructure question unresolved -- Raj thinks we need it, Marcus thinks the eng cost isn't worth it for a flow this broken.
+**Open:** Marcus needs a final call on how guest sessions upgrade into
+team accounts. Raj wants a 10% paid-acquisition holdback for cleaner
+readouts. Legal still needs to confirm the retention window for
+anonymous data.
 
-**Next:** Review Priya's wireframes with Dana. Get Marcus's SDK assessment. Make the A/B test call.
+**Next:** Lock Phase 1 scope. Finalize the activation event contract
+with analytics. Bring the rollout recommendation to Dana before the
+April launch review.

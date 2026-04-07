@@ -55,8 +55,8 @@ Present all open corrections grouped by domain. Look for:
 - **Quick wins** — corrections with obvious system fixes (update a skill, fix CLAUDE.md)
 
 For each open correction or pattern, propose a concrete system change:
-- "This correction suggests updating [skill/file]"
-- "These N corrections about [domain] suggest [change]"
+- "This correction suggests updating `library/reference/conventions.md`"
+- "These 3 corrections about naming suggest tightening binder guidance"
 
 Ask the user which to act on. Then:
 1. Make the changes (edit skills, CLAUDE.md, reference docs, conventions)

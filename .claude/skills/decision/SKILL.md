@@ -38,14 +38,14 @@ in v1. Voice and formatting refinement happen in `/editor`.
 - Fill in all sections:
   - Context: What led to this decision
   - Options: As a table (Option | Pro | Con)
-  - Decision: Bold decision line with rationale. `**Decision:** [Choice]. [Rationale.]`
-  - Attribution: `Per [Name]: *"[Quote]"*` if a stakeholder drove the decision
+  - Decision: Bold decision line with rationale. `**Decision:** Option B. It simplifies rollout and keeps support load low.`
+  - Attribution: `Per Marcus Chen: *"Path versioning is obvious to partners and easy to support."*` if a stakeholder drove the decision
   - Consequences: What changes as a result
 
 ### Step 4: Writing Style
 
 - Options in a comparison table, not separate subsections
-- Decision framed as: Option A / Option B -> **Decision:** [choice]. [rationale.]
+- Decision framed as: Option A / Option B -> **Decision:** Option B. It keeps the tradeoff explicit and the recommendation easy to scan.
 - Be concise but complete — someone reading this in 6 months should understand why
 
 ## Tools Used

@@ -39,26 +39,26 @@ Every doc opens with a bold-field metadata block. Not YAML frontmatter — that'
 
 **Standard fields (most doc types):**
 ```
-**Owner:** [Your Name](mailto:your@email.com)
+**Owner:** Maya Desai (mailto:maya@signalpath.example)
 **Status:** `DRAFT`
 **Reviewers:**
 
-* Eng: [Name](mailto:email)
-* Design: [Name](mailto:email)
-* Ops: [Name](mailto:email)
+* Eng: Marcus Chen (mailto:marcus@signalpath.example)
+* Design: Priya Sharma (mailto:priya@signalpath.example)
+* Ops: Jordan Wells (mailto:jordan@signalpath.example)
 
-**Last Updated:** Month Day, Year
-**Resources:** [Doc Title](url)
+**Last Updated:** April 6, 2026
+**Resources:** [Mobile Activation Dashboard](https://analytics.signalpath.example/mobile-activation)
 ```
 
 **Strategy variant** (heavier, more formal):
 ```
 **Product Line Strategy**
-**[Product Group Name]**
-**Contributors:** [Name](mailto:email), [Name](mailto:email)
-**Reference Documents:** [Title](url)
+**Core Product**
+**Contributors:** Maya Desai (mailto:maya@signalpath.example), Dana Alvarez (mailto:dana@signalpath.example)
+**Reference Documents:** [FY26 Product Plan](https://notion.so/signalpath/fy26-product-plan)
 **Status:** Draft / **In Review** / Final
-**Last Updated:** Month Day, Year
+**Last Updated:** April 6, 2026
 ```
 
 **Key conventions:**
@@ -128,12 +128,14 @@ State options, then declare the decision with rationale:
 ```
 | Decision | Owner | Status | Notes |
 | ----- | ----- | ----- | ----- |
-| **1. Ownership:** Who is responsible? | [Name] | Completed | Decision: Team A first, then Team B. |
+| **1. Ownership:** Who is responsible? | Maya Desai | Completed | Decision: Product owns the rollout, Eng owns the guardrails. |
 ```
 
-Or inline: **Decision:** Option B. [One-sentence rationale.]
+Or inline: **Decision:** Option B. It keeps rollout risk low and the
+customer story simple.
 
-Attribution: "Per [Name]:" or "From [Date]: [Name] decided..."
+Attribution: "Per Marcus Chen:" or "From April 2, 2026: Dana Alvarez
+decided..."
 
 ### Strawman/WIP disclaimers
 
@@ -181,7 +183,7 @@ In PRDs, requirements get IDs:
 Jobs to Be Done statements:
 
 ```
-**When** [situation] → **I want** [capability] → **So that** [outcome]
+**When** a dispatcher is covering 3 last-minute callouts → **I want** to reassign work from my phone → **So that** the schedule stays accurate without opening my laptop
 ```
 
 ### ASCII/table UI mockups
@@ -220,8 +222,8 @@ The current label is `AI Draft Pending`.
 
 ### RFC
 1. Metadata block
-2. `## **Problem Statement**` or `## **The Problem: [Descriptive Name]**`
-3. `## **Proposal: [Short Description]**` or `## **The Answer: [Framing]**`
+2. `## **Problem Statement**` or `## **The Problem: Reporting Lag Hurts Sales**`
+3. `## **Proposal: Centralized Delivery**` or `## **The Answer: Preview Before Account Setup**`
 4. `### **What Changes**` (specifics)
 5. `### **Why This Approach**` (pros/cons, tradeoffs)
 6. `## **Alternatives Considered**`
@@ -247,8 +249,8 @@ The current label is `AI Draft Pending`.
 
 ### Eval Framework
 1. Metadata block
-2. `## **What [System] Does**` (numbered capabilities)
-3. `## **Phase N: [Name] [Status Emoji]**` sections, each with:
+2. `## **What the Assistant Does**` (numbered capabilities)
+3. `## **Phase 1: Baseline Readout ✅ COMPLETE**` sections, each with:
    - `### **What We Validated**` / `### **What We're Measuring and Why**`
    - Metrics table (Metric | Target | Result)
    - `### **What Phase N Told Us**` / `### **What Phase N Did NOT Tell Us**`
@@ -257,9 +259,9 @@ The current label is `AI Draft Pending`.
 ### Launch Plan
 1. Metadata block
 2. `## **Launch Calendar**` (table: Phase | Dates | Key Activities | Status | DRIs)
-3. `## **Week N: [Description] ([Date])**` sections with:
+3. `## **Week 1: Internal Rollout (Apr 14)**` sections with:
    - Decision tables
-   - "Ready to [milestone] When:" checkbox lists
+   - "Ready to ship when:" checkbox lists
 4. `## **Rollback Plan**`
 
 ### Strategy Doc
@@ -303,7 +305,7 @@ Starter defaults for clear, human writing. Customize these in `library/reference
 - "Let's unpack this"
 - "It's important to note that"
 - "It's worth noting"
-- "In today's [anything]"
+- "In today's _anything_"
 - "Let's dive in / dive deep"
 - "At the end of the day"
 - "Moving forward"
@@ -342,7 +344,7 @@ Starter defaults for clear, human writing. Customize these in `library/reference
 - "Cutting-edge"
 
 **Generic insider claims:**
-- "As someone who [has done X for Y years]"
+- "As someone who has done X for Y years"
 - "In my experience"
 - "From what I've seen"
 
@@ -356,11 +358,10 @@ Starter defaults for clear, human writing. Customize these in `library/reference
 
 ### Writing Samples
 
-_Paste your own writing below. The more examples you provide, the better Claude can match your voice. Include a mix of doc types: a spec section, a decision doc, a stakeholder email, an RFC proposal. Real writing beats instructions._
-
-```
-[Your writing samples here]
-```
+_Add 2-4 short excerpts from your own writing during setup if you want
+tighter voice matching. Include a mix of doc types: a spec section, a
+decision doc, a stakeholder email, and an RFC proposal. Real writing
+beats instructions._
 
 ---
 
@@ -372,7 +373,8 @@ _Paste your own writing below. The more examples you provide, the better Claude 
 - **No audience hedging.** Don't write "for non-technical stakeholders" — just write clearly.
 - **No decorative formatting.** Every bold, table, and bullet earns its place.
 - **No standalone Recommendations section.** Weave recommendations into the proposal/solution narrative.
-- **No passive voice for decisions.** "We decided" or "[Name] decided" — not "It was decided."
+- **No passive voice for decisions.** "We decided" or "Dana decided" —
+  not "It was decided."
 - **No Mermaid for UI concepts.** Mermaid is for state machines and workflows. ASCII and tables for UI.
 - **No unbold headers.** Every `##` gets `**bold**` inside it.
 - **No colon after bold list leads.** `- **Term.** Explanation` not `- **Term:** Explanation`

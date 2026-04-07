@@ -89,7 +89,9 @@ Recurring patterns from writing specs, research, and working with engineering.
 - **Start from user pain, not system architecture.** Every strong spec opens with the problem from the user's perspective, then builds to the solution.
 - **"Day in the life" narratives** work better than abstract feature descriptions. Walk through a real scenario.
 - **Two-user-table format** for multi-persona products. Table with Role, Who, What They Care About. Forces you to think about each audience explicitly.
-- **JTBD for requirements**: When [situation] → I want [capability] → So that [outcome]. Keeps features tied to real needs.
+- **JTBD for requirements**: When a new manager inherits 40 open jobs →
+  I want one prioritized view of what to fix first → So that I can take
+  action without reading 5 reports. Keeps features tied to real needs.
 - **Explicit non-goals** prevent scope creep. State what you're NOT building. Stakeholders will assume everything is in scope unless you say otherwise.
 - **Always include open questions.** Signals what you don't know yet and invites the right conversations before engineering starts.
 - **Mermaid diagrams for workflows and state machines.** State transitions are hard to describe in prose. A diagram communicates the system in seconds.

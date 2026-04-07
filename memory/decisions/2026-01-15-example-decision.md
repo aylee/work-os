@@ -2,17 +2,20 @@
 
 **Date:** 2026-01-15
 **Status:** Decided
-**Decided by:** [Your Name], Marcus Chen
+**Decided by:** Maya Desai, Marcus Chen
 
 ---
 
 ## Context
 
-We're about to launch our public API and need to decide on a versioning strategy before the first external consumer goes live. Once we ship v1, changing the strategy becomes exponentially harder -- every external integration is a contract we can't easily break.
+SignalPath is about to launch its partner API, and we need to decide on
+a versioning strategy before the first external customer goes live. Once
+we ship v1, changing the strategy becomes exponentially harder -- every
+integration becomes a contract we can't easily break.
 
 Three constraints shaped this decision:
-1. We have 4 external partners waiting to integrate (Q2 launch commitment)
-2. Our internal API changes frequently (~3 breaking changes/month during active development)
+1. We have 4 launch partners waiting to integrate in Q2
+2. Our internal APIs still change frequently (~3 breaking changes/month during active development)
 3. We have 2 backend engineers -- we can't maintain many parallel versions
 
 ## Options Considered
@@ -56,8 +59,8 @@ Per Marcus: *"Header versioning is technically cleaner but every integration par
 
 ## Consequences
 
-- All API routes will be prefixed with `/v1/` before the Q2 launch
+- All partner API routes will be prefixed with `/v1/` before the Q2 launch
 - We'll document a versioning policy in the public API docs: breaking changes = new major version, 12-month support window for old versions
 - Internal APIs remain unversioned (they change too fast, and we control both sides)
 - When v2 is eventually needed, we'll spin up a separate deployment rather than maintaining two versions in one codebase
-- Marcus will add API versioning to the eng onboarding guide
+- Marcus will add API versioning to the partner-platform onboarding guide

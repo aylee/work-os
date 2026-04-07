@@ -5,89 +5,115 @@ type: area
 
 # Work
 
-Career, professional development, and company context. This is the anchor area -- most binders on the desk connect here.
+Company context for the shipped demo workspace. This example centers on
+one fictional company so the desk reads like an intentional operating
+system, not unfinished setup.
 
 ## Company
 
-> Replace this section with your company context. The more specific you are, the more useful Claude becomes when drafting docs, reviewing strategy, and orienting to your work.
-
-**[Your Company]** does [what it does] for [who it serves].
+**SignalPath** is a fictional workflow platform for distributed field
+teams. Managers run scheduling, reporting, and pricing from the web
+app; technicians use the mobile app in the field; larger customers
+connect the product to their stack through a partner API.
 
 ### Role
 
 | Field | Value |
 |-------|-------|
-| **Title** | [Your Title] |
-| **Team** | [Your Team / Product Group] |
-| **Reports to** | [Manager Name] |
-| **Scope** | [What you own -- products, metrics, outcomes] |
+| **Title** | Group Product Manager, Activation & Monetization |
+| **Team** | Core Product |
+| **Reports to** | Dana Alvarez, VP Product |
+| **Scope** | New-user activation across web and mobile, self-serve monetization, and packaging for growth accounts |
 
 ### Team Structure
 
 | Person | Role | Works on |
 |--------|------|----------|
-| [Name] | Eng Lead | [Focus area] |
-| [Name] | Designer | [Focus area] |
-| [Name] | Data / Analytics | [Focus area] |
-| [Name] | Ops / Support | [Focus area] |
+| Marcus Chen | Eng Lead | Mobile onboarding, identity, and partner API foundations |
+| Priya Sharma | Staff Product Designer | Activation flows, design system, and lifecycle UX |
+| Taylor Kim | Revenue Ops Lead | Pricing analysis, packaging experiments, and forecast models |
+| Jordan Wells | Finance Partner | Margin modeling, launch approvals, and board-ready narratives |
 
 ### Strategy
 
-> Summarize your team's current strategy in 2-3 sentences. What's the thesis? What are you optimizing for this year?
-
-[Your team strategy here. Example: "Reduce cost-to-serve by 40% through automation while maintaining quality. The unlock is replacing manual workflows with AI agents, starting with the highest-volume tasks."]
+SignalPath wins when a new team can go from invite to first completed
+job in a day, then grow into deeper integrations as their operation gets
+more complex. This quarter the product org is tightening activation,
+simplifying packaging, and laying down partner API foundations that make
+larger accounts easier to land without bloating the core workflow.
 
 ## Big Rocks
 
-> These are your quarterly priorities -- the 3-4 things that matter most. Update these each quarter. `/desk` and `/morning` cross-reference these to keep you focused.
+### 1. Raise first-week activation
+Make the first session feel useful fast enough that new teams complete
+setup and log real work in the same week.
+**DRI**: Maya Desai | **KPI**: first-week activated workspaces | **Success**: 24% -> 40%
 
-### 1. [First Priority]
-[One-sentence description of what "done" looks like.]
-**DRI**: [Name] | **KPI**: [Metric] | **Success**: [Target]
+- [ ] Ship the mobile onboarding redesign
+- [ ] Retire the stale tour across web and mobile
+- [ ] Align activation instrumentation with growth reporting
 
-- [ ] Milestone 1
-- [ ] Milestone 2
-- [ ] Milestone 3
+### 2. Rework pricing for healthier expansion
+Land a pricing model that is easier for smaller teams to understand and
+captures more value from large, integration-heavy accounts.
+**DRI**: Maya Desai | **KPI**: projected ARR lift with flat SMB churn | **Success**: pricing package approved for Q3 rollout
 
-### 2. [Second Priority]
-[One-sentence description.]
-**DRI**: [Name] | **KPI**: [Metric] | **Success**: [Target]
+- [ ] Finish churn and margin modeling
+- [ ] Pressure-test the hybrid package with sales and finance
+- [ ] Draft the rollout memo for the pricing council
 
-- [ ] Milestone 1
-- [ ] Milestone 2
+### 3. Launch the partner API foundation
+Turn the API from a bespoke enterprise promise into a productized
+surface with clear versioning and support expectations.
+**DRI**: Marcus Chen | **KPI**: beta integrations live | **Success**: 2 pilot customers on v1 policy by end of quarter
 
-### 3. [Third Priority]
-[One-sentence description.]
-**DRI**: [Name] | **KPI**: [Metric] | **Success**: [Target]
+- [ ] Publish the versioning policy
+- [ ] Finalize auth and rate-limit guidance
+- [ ] Select the first beta partners
 
-- [ ] Milestone 1
-- [ ] Milestone 2
+### 4. Tighten operating visibility
+Give product, finance, and growth the same read on what is working so
+decisions move faster.
+**DRI**: Taylor Kim | **KPI**: time to answer routine product questions | **Success**: weekly KPI readout lands every Monday
 
-### 4. [Fourth Priority] (optional)
-[One-sentence description.]
-**DRI**: [Name] | **KPI**: [Metric] | **Success**: [Target]
-
-- [ ] Milestone 1
+- [ ] Standardize the activation dashboard
+- [ ] Replace ad hoc pricing pulls with one shared model
+- [ ] Document the attribution assumptions
 
 ## What's On the Desk
 
-*Last refreshed: [date] -- run `/desk` weekly to keep current*
+*Last refreshed: Apr 6, 2026*
 
-> This section is a snapshot of active projects, grouped by Big Rock. `/desk` reads this for orientation. Keep it updated as projects start, ship, or stall.
+This is the current snapshot of active work grouped by Big Rock.
 
-### Big Rock 1: [Name]
+### Big Rock 1: Raise first-week activation
 
-**Now:** [What's actively in progress]
-**Next:** [What's queued]
+**Now:** `desk/mobile-app-redesign/` is driving the mobile half of the
+activation push, with guest access and in-context permissions as the
+primary bets.
+**Next:** Bring the archived `onboarding-v2` learnings back into the
+manager-web follow-up once mobile scope is locked.
 
 | Project | Status | Docs |
 |---------|--------|------|
-| [Project name] | In Progress | `desk/{binder}/` |
+| Mobile App Redesign | In Progress | `desk/mobile-app-redesign/` |
 
-### Big Rock 2: [Name]
+### Big Rock 2: Rework pricing for healthier expansion
 
-**Now:** [What's actively in progress]
-**Next:** [What's queued]
+**Now:** `desk/q3-pricing/` is converging on a hybrid package
+recommendation for the April pricing council.
+**Next:** Translate the recommendation into customer-facing talk tracks
+and migration rules.
+
+| Project | Status | Docs |
+|---------|--------|------|
+| Q3 Pricing Strategy Review | In Progress | `desk/q3-pricing/` |
+
+### Big Rock 3: Launch the partner API foundation
+
+**Now:** The versioning decision is documented in
+`memory/decisions/2026-01-15-example-decision.md`.
+**Next:** Draft auth docs and pick the first pilot accounts.
 
 ## This Week
 
@@ -95,7 +121,7 @@ See [plans.md](plans.md) for weekly focus.
 
 ## Systems
 
-- **Notion area:** [Your Notion work area URL, if using Notion]
-- **Databases:** [Key database names from `.claude/notion.yaml`]
-- **Code:** [Repo paths, e.g., `~/code/your-repo`]
-- **Project management:** [Linear, Jira, Asana -- whatever you use]
+- **Notion area:** `https://notion.so/signalpath/product`
+- **Databases:** Goals, Projects, Pricing Council, Customer Research
+- **Code:** `~/code/signalpath-app`, `~/code/signalpath-api`
+- **Project management:** Linear

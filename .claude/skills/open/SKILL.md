@@ -92,13 +92,13 @@ source: session
 ---
 
 ## What happened
-[What was suboptimal]
+Describe what was suboptimal.
 
 ## Should have been
-[What the correct behavior looks like]
+Describe what the correct behavior should have looked like.
 
 ## Why
-[Root cause or context]
+Record the root cause or relevant context.
 ```
 
 ## Tools Used

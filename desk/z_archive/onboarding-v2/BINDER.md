@@ -6,11 +6,13 @@ completed: 2025-12-18
 
 # Onboarding v2
 
-Rebuilt the web onboarding flow. Replaced the 12-step wizard with a 3-step progressive setup. Shipped to 100% of new signups in December 2025.
+Rebuilt SignalPath's web onboarding flow. Replaced the 12-step wizard
+with a 3-step progressive setup. Shipped to 100% of new signups in
+December 2025.
 
 ## Context
 
-- **PM:** [Your Name]
+- **PM:** Maya Desai
 - **Eng:** Marcus Chen, Lisa Park
 - **Design:** Priya Sharma
 - **Results:** Onboarding completion rate improved from 45% to 71%. Time-to-first-value dropped from 8 minutes to 2.5 minutes.

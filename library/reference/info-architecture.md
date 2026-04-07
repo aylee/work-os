@@ -13,7 +13,7 @@ Supporting systems (optional — add what you use):
 
 | System | Role | What goes here | Interface |
 |--------|------|----------------|-----------|
-| [Your Company]'s project tracker | Work tracking | Engineering tickets, sprints, cycles | Browser / MCP |
+| Company project tracker (Linear, Jira, etc.) | Work tracking | Engineering tickets, sprints, cycles | Browser / MCP |
 | Google Drive / Confluence | Shared files | Decks, spreadsheets, docs others collaborate on | Browser |
 | ~/Documents | Filing cabinet | PDFs, scans, legal docs you *receive* | Finder |
 
@@ -31,7 +31,7 @@ Supporting systems (optional — add what you use):
 ```
 Think in Notion → Draft in work-os → Ship to target repo or shared docs
                                    ↘ Share a deck? → Google Drive
-                                   ↘ Side project? → ~/code/<project>/
+                                   ↘ Side project? → ~/code/receipt-parser/
 ```
 
 ## Notion = Database Layer
@@ -68,22 +68,23 @@ Work-os is where things get written and where the system learns. Two functions:
 
 4. **Project tracker = the eng work tracker.** Don't duplicate ticket status in work-os. Pull status across systems as needed.
 
-5. **Code projects live in ~/code/<project>/**, separate from work-os. work-os holds PM artifacts (specs, research), ~/code holds the actual code.
+5. **Code projects live in `~/code/`**, separate from work-os. work-os
+holds PM artifacts (specs, research), `~/code/` holds the actual code.
 
 6. **`.claude/notion.yaml` = the Notion database registry** (if configured). Machine-readable URLs for Goals, Projects, Tasks, Meeting Notes. Skills read this directly. Don't duplicate these URLs elsewhere.
 
 ## Project Structure
 
-**For work ([Your Company]):**
-- PM artifacts → `work-os/desk/{org-prefix}-{project}/{descriptor}.md`
-- Code → `~/code/{repo}/`
+**For company work (example: SignalPath):**
+- PM artifacts → `work-os/desk/mobile-app-redesign/mobile-redesign-brief.md`
+- Code → `~/code/signalpath-app/`
 
 **For side ventures:**
-- PM artifacts → `work-os/desk/{project}/{descriptor}.md`
-- Code → `~/code/<project>/`
+- PM artifacts → `work-os/desk/receipt-parser/notes.md`
+- Code → `~/code/receipt-parser/`
 
 **For personal scripts:**
-- Just put everything in `~/code/<project>/`
+- Just put everything in `~/code/daily-screenshot/`
 - README.md *is* the spec
 - Don't over-engineer personal projects
 

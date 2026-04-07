@@ -15,7 +15,7 @@ Shows: metadata block --> problem statement with competing patterns --> proposal
 ```markdown
 # **RFC: Notification System Overhaul**
 
-**Author:** [Your Name]
+**Author:** Maya Desai
 **Status:** `READY FOR REVIEW`
 **Reviewers:**
 
