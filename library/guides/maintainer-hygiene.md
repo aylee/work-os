@@ -3,6 +3,10 @@
 Public demo content in work-os should stay polished, fictional, and
 free of setup residue.
 
+This guide covers the audit side of maintenance. For the canonical
+maintainer workflow, upstream-sync runbook, and publish checklist, start
+with `library/guides/maintainer-workflow.md`.
+
 ## Run the audit
 
 From the repo root:

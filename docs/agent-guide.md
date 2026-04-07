@@ -36,6 +36,7 @@ Load the smallest relevant surface first.
 | Backburner ideas | `areas/work/backburner.md` |
 | Writing and editing defaults | `library/reference/me.md` and `library/reference/writing-guide.md` |
 | File naming and lifecycle rules | `library/reference/conventions.md` |
+| Repo-wide maintenance, publishing, or upstream sync | `library/guides/maintainer-workflow.md` and `library/guides/maintainer-hygiene.md` |
 | Past decisions | `memory/decisions/` |
 | Open corrections | `memory/corrections/` |
 | Session history | `memory/sessions/` |
@@ -95,7 +96,8 @@ Rules:
 Setup-owned starter files and reusable templates may stay generic.
 Shipped examples should not. The current placeholder and public-demo
 hygiene audit lives at `library/scripts/audit_public_hygiene.py`; the
-maintainer workflow is documented in
+canonical maintainer workflow lives in
+`library/guides/maintainer-workflow.md`, and the audit details live in
 `library/guides/maintainer-hygiene.md`.
 
 ## cc_state
@@ -126,6 +128,8 @@ Rules:
 - Keep repo-wide contracts tool-neutral where possible.
 - If a change affects both Claude Code and Codex behavior, update
   `AGENTS.md` or this guide before adding tool-specific instructions.
+- For repo-wide maintainer changes or `alex-os` syncs, follow
+  `library/guides/maintainer-workflow.md`.
 
 ## Writing Workflow
 

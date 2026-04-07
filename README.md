@@ -92,11 +92,14 @@ directory is per-clone, gitignored, and intentionally untracked.
 The repo aims for shared structure across both tools, not slash-command
 parity.
 
-## Maintainer Hygiene
+## Maintainer Workflow
 
-Maintainers can run `python3 library/scripts/audit_public_hygiene.py` to
-catch placeholder leakage and demo-content drift before publishing. See
-`library/guides/maintainer-hygiene.md`.
+Maintainers should start with
+`library/guides/maintainer-workflow.md` for the canonical workflow for
+maintaining, auditing, and publishing work-os. Run
+`python3 library/scripts/audit_public_hygiene.py` before publishing to
+catch placeholder leakage and demo-content drift; the audit details live
+in `library/guides/maintainer-hygiene.md`.
 
 ## What You Get
 
