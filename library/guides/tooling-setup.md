@@ -20,6 +20,42 @@ The repo contract is shared. The UX is not identical.
 Keep it untracked and use it for active plans, notes, traces, and
 spikes.
 
+## Install the runtimes
+
+### Claude Code
+
+Anthropic's current recommended install path is the native installer:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+On macOS, Homebrew is also supported:
+
+```bash
+brew install --cask claude-code
+```
+
+Start Claude Code with `claude` and complete the login flow on first
+launch.
+
+### Codex
+
+OpenAI's current Codex CLI install path is:
+
+```bash
+npm install -g @openai/codex
+```
+
+On macOS, Homebrew is also supported:
+
+```bash
+brew install codex
+```
+
+Start Codex with `codex` and sign in with ChatGPT or an API key on
+first launch.
+
 ---
 
 ## Brewfile

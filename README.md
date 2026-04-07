@@ -13,10 +13,13 @@ reference material so you can try the workflow before personalizing it.
 1. Install Claude Code:
 
    ```bash
-   npm install -g @anthropic-ai/claude-code
+   curl -fsSL https://claude.ai/install.sh | bash
    ```
 
-2. Clone the repo and open Claude:
+   Official docs now recommend the native installer. If you prefer
+   Homebrew on macOS, `brew install --cask claude-code` also works.
+
+2. Clone the repo and open Claude Code:
 
    ```bash
    git clone https://github.com/aylee/work-os.git
@@ -24,7 +27,7 @@ reference material so you can try the workflow before personalizing it.
    claude
    ```
 
-3. Run:
+3. Sign in on first launch, then run:
 
    ```text
    /desk
@@ -36,14 +39,31 @@ work.
 
 ### Codex
 
+1. Install Codex:
+
+   ```bash
+   npm install -g @openai/codex
+   ```
+
+   On macOS, `brew install codex` is also supported.
+
+2. Clone the repo and start Codex:
+
+   ```bash
+   git clone https://github.com/aylee/work-os.git
+   cd work-os
+   codex
+   ```
+
+3. Sign in with ChatGPT or an API key on first launch, then start with
+   a prompt like:
+
+   ```text
+   Read AGENTS.md and docs/agent-guide.md, then summarize the current demo desk using areas/work/plans.md and desk/*/BINDER.md.
+   ```
+
 Codex does not use Claude slash commands. It uses the same repo
 structure and shared agent contract.
-
-Clone the repo, open it in Codex, and start with a prompt like:
-
-```text
-Read AGENTS.md and docs/agent-guide.md, then summarize the current demo desk using areas/work/plans.md and desk/*/BINDER.md.
-```
 
 ## Make It Yours
 
@@ -71,6 +91,12 @@ directory is per-clone, gitignored, and intentionally untracked.
 
 The repo aims for shared structure across both tools, not slash-command
 parity.
+
+## Maintainer Hygiene
+
+Maintainers can run `python3 library/scripts/audit_public_hygiene.py` to
+catch placeholder leakage and demo-content drift before publishing. See
+`library/guides/maintainer-hygiene.md`.
 
 ## What You Get
 
@@ -129,9 +155,10 @@ Capture -> Store -> Analyze -> Apply
 
 - macOS or Linux
 - git recommended, not required
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) for the
+- [Claude Code](https://code.claude.com/docs/en/quickstart) for the
   full slash-command UX
-- Codex supported through the repo contract and markdown structure
+- [Codex](https://developers.openai.com/codex/quickstart) supported
+  through the repo contract and markdown structure
 - Optional: [Homebrew](https://brew.sh) for CLI tools in `Brewfile`
 
 Any terminal works. Good options are [cmux](https://www.cmux.dev/),

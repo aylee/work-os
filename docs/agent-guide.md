@@ -92,6 +92,12 @@ Rules:
 - Use `/setup` or direct edits to personalize setup-owned files such as
   `library/reference/me.md`, area docs, and binders.
 
+Setup-owned starter files and reusable templates may stay generic.
+Shipped examples should not. The current placeholder and public-demo
+hygiene audit lives at `library/scripts/audit_public_hygiene.py`; the
+maintainer workflow is documented in
+`library/guides/maintainer-hygiene.md`.
+
 ## cc_state
 
 `cc_state/` is local working state shared by Claude Code and Codex.
